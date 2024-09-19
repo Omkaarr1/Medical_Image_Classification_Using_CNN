@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+    <!-- Head content remains the same -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Examination</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -53,27 +55,15 @@
             }
         }
     </style>
-    <title>Medical Examination</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="bg-no-repeat bg-cover bg-center">
     <div class="flex justify-center items-center h-screen">
-        <div class="transparent-box" id="box1">
-            <h1 class="text-2xl font-semibold text-center">Choose an Option</h1>
-            <button id="xRayButton"
-                class="bg-blue-500 text-white py-2 px-4 rounded-lg focus:ring-2 focus:ring-blue-300 hover:bg-green-600">
-                Use X-Ray Examination
-            </button>
-            <button id="drugButton"
-                class="bg-blue-500 text-white py-2 px-4 rounded-lg focus:ring-2 focus:ring-blue-300 hover:bg-green-600">
-                Use Drug Recommendation System
-            </button>
-        </div>
+        <!-- Removed the "Choose an Option" part -->
         <div class="transparent-box" id="box2">
             <h1 class="text-2xl font-semibold text-center">Choose an Examination Type</h1>
-            <form method="post" enctype="multipart/form-data" action="/upload"
-                class="space-y-4 animate__animated animate__fadeIn">
+            <form method="post" enctype="multipart/form-data" action="/upload" class="space-y-4 animate__animated animate__fadeIn">
                 <label class="block">
                     <input type="radio" name="choice" value="1" required
                         class="mr-2 text-blue-500 form-radio focus:ring-2 focus:ring-blue-300">
@@ -107,16 +97,10 @@
     <script>
         $(document).ready(() => {
             $("#loading-animation").hide();
-            $("#box2").hide();
             $("#xRayButton").click(() => {
                 $("#box2").show();
                 $("#box1").hide();
-            });
-
-            $("#drugButton").click(() => {
-                // Open another website in a new tab for Drug Recommendation System.
-                window.open("http://34.131.217.199/", "_self");
-            });
+            })
         });
     </script>
 </body>
