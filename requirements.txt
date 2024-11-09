@@ -6,3 +6,4 @@ pillow
 tensorflow
 gdown
 python-multipart
+scikit-learn
